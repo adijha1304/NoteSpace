@@ -1,0 +1,11 @@
+services:
+  mongodb:
+    image: mongo:7
+    container_name: notespace-mongodb
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    volumes:
+      - notespace_data:/data/db
+volumes:
+  notespace_data:
